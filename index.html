@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Adicionando abaixo bootstrap 5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Adicionando icones  (google icons> Developer Guide) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="css/estilo.css">
     <title>Projeto sistema com VUE</title>    
 </head>
@@ -50,6 +52,39 @@
         </nav>
 
     </header>
+
+    <!-- Construindo o conteudo principal -->
+    <main>
+        <!-- Boas vindas -->
+        <section class="p-3 my-2 bg-primary shadow">
+            <div class="container-fluid py-5 text-center"> 
+                <h2 class="display-6 fw-bold text-light">Olá! Seja bem vindo ao nosso sistema.</h2>
+            </div>
+        </section>
+
+        <!-- Home após boas vindas -->
+        <section class="p-3 my-5 shadow col-md-10 mx-auto">
+            <div class="container-fluid py-5 text-center">
+                <p class="fs-4">Para começar, escolha uma das funções do menu &#9757;&#127995</p>
+            </div>
+        </section>
+        
+        <!-- Funcionalidade 1: idade -->
+        <section class="p-3 my-5 col-md-10 shadow mx-auto">
+            <div class="container-fluid py-5 text-center">
+                <form action="">
+                    <div class="d-flex align-items-center">
+                        <span class="material-symbols-outlined fs-1 me-2">event</span>
+                        <input type="number" class="form-control form-control-lg" placeholder="Digite o ano do seu nascimento com 4 dígitos" min="1900" max="2050" required>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                        <button type="submit" class="btn btn-lg btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
 <!-- Adicionando o CDN javascript do Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
