@@ -11,7 +11,7 @@
     <title>Projeto sistema com VUE</title>    
 </head>
 <body>
-    <header>
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-menu"> <!-- Adicionando barra de menu superior "nav"-->
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand">Empresa Fullstack</a> <!-- tag "a href" de link para ser redirecionado para um link "index.html" ou imagem -->
@@ -91,7 +91,7 @@
                 <form action="">
                     <section class="row">
                         <!-- Dividindo duas colunas col-md-6 = metade -->
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-center mt-2">
                             <span class="material-symbols-outlined fs-1 me-2">currency_exchange</span>
                             <input type="text" class="form-control form-control-lg" placeholder="Informe a quantidade de valor em dólar">
                         </div>
@@ -141,11 +141,11 @@
             <div class="container-fluid py-5 text-center">
                 <form action="">
                     <section class="row">
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-center mt-2">
                             <span class="material-symbols-outlined fs-1 me-2">currency_exchange</span>
                             <input type="text" class="form-control form-control-lg" placeholder="Qual valor você quer calcular?" pattern="^[0-9]+(\.([0-9]{2}))?$" required>
                         </div>
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-center mt-2">
                             <span class="material-symbols-outlined fs-1 me-2">percent</span>
                             <input type="text" class="form-control form-control-lg" placeholder="Qual o valor da porcentagem?" pattern="^[0-9]+(\.([0-9]{2}))?$" required>
                         </div>
@@ -162,7 +162,7 @@
 
     <!-- CRIANDO O MODAL PARA O SOBRE -->
     <section class="modal fade" id="modalSobre" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Desenvolvedor</h5>
@@ -172,6 +172,18 @@
                     <div class="modal-body">
                         <div class="card">
                             <img src="https://i.stack.imgur.com/YaL3s.jpg" alt="foto de perfil" class="card-img-top img-thumbnail rounded-circle mx-auto w-200">
+
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Eduardo Ferreira</h5>
+                                <p class="card-text text-center">email@gmail.com</p>
+                                <p class="card-text text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio nam nobis rerum! Ex corporis aut tempore nemo. Atque voluptatibus dolore quisquam aperiam perferendis voluptatem nulla, laborum suscipit aliquid. Vel.
+                                Quisquam excepturi debitis inventore odio libero. Cum, ut esse distinctio id a dolores dolore hic perspiciatis eaque, sequi atque voluptatibus eligendi molestiae nulla unde, ea aspernatur tempora aliquam adipisci dignissimos?
+                                Et ex cupiditate eos unde magni odit voluptatem totam delectus possimus. Enim vero iusto eaque ratione adipisci fugit nisi rerum, voluptatibus iste, nulla pariatur ipsum veniam earum veritatis provident consectetur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut sapiente recusandae voluptas ab expedita, ipsum nulla enim rerum suscipit dolor consequatur voluptatum perspiciatis reiciendis repudiandae ducimus odio soluta quidem non!</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                            </div>
                         </div>
                     </div>
                 </div>
