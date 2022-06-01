@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Projeto sistema com VUE</title>    
 </head>
-<body>
+<body id="app">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-menu"> <!-- Adicionando barra de menu superior "nav"-->
             <div class="container-fluid">
@@ -31,16 +31,17 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Calcular Idade</a>
+                                    <!-- $event permite acessar o evento horiginal do DOM de forma que eu consiga manipular toda a informação do conteúdo -->
+                                    <a href="" class="nav-link idade" @click.prevent="verificarLink($event.target.classList)">Calcular Idade</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Calcular Câmbio</a>
+                                    <a href="" class="nav-link cambio">Calcular Câmbio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Verificar dia da semana</a>
+                                    <a href="" class="nav-link diaSemana">Verificar dia da semana</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Calcular desconto</a>
+                                    <a href="" class="nav-link desconto">Calcular desconto</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalSobre">Sobre</a>
@@ -63,14 +64,14 @@
         </section>
 
         <!-- Home após boas vindas -->
-        <section class="p-3 my-5 shadow col-md-10 mx-auto">
+        <section v-if="bloco.inicio" class="p-3 my-5 shadow col-md-10 mx-auto">
             <div class="container-fluid py-5 text-center">
                 <p class="fs-4">Para começar, escolha uma das funções do menu &#9757;&#127995</p>
             </div>
         </section>
         
         <!-- Funcionalidade 1: idade -->
-        <section class="p-3 my-5 col-md-10 shadow mx-auto">
+        <section v-if="bloco.idade" class="p-3 my-5 col-md-10 shadow mx-auto">
             <div class="container-fluid py-5 text-center">
                 <form action="">
                     <div class="d-flex align-items-center">
@@ -86,7 +87,7 @@
         </section>
 
         <!-- Funcionalidade 2: Câmbio -->
-        <section class="p-3 my-5 col-md-10 shadow mx-auto">
+        <section v-if="bloco.cambio" class="p-3 my-5 col-md-10 shadow mx-auto">
             <div class="container-fluid py-5 text-center">
                 <form action="">
                     <section class="row">
@@ -118,7 +119,7 @@
         </section>
 
          <!-- FUNCIONALIDADE 3: VERIFICAR DIA DA SEMANA -->
-       <section class="p-3 my-5 col-md-10 shadow mx-auto">
+       <section v-if="bloco.diaSemana" class="p-3 my-5 col-md-10 shadow mx-auto">
             <div class="container-fluid py-5 text-center">
                 <form action="">
                  <div class="d-flex align-items-center">
@@ -137,7 +138,7 @@
     <!-- FUNCIONALIDADE 4: DESCONTO PORCENTAGEM -->
       
 
-        <section class="p-3 my-5 col-md-10 shadow mx-auto">
+        <section v-if="bloco.desconto" class="p-3 my-5 col-md-10 shadow mx-auto">
             <div class="container-fluid py-5 text-center">
                 <form action="">
                     <section class="row">
@@ -190,9 +191,10 @@
             </div>
         </section>
 
+<script src="https://unpkg.com/vue@3"></script>        
 <!-- Adicionando o CDN javascript do Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<script src="js/script.js"></script>
 <script>
     const diaSemana = document.querySelector('#diaSemana')
     const tooltip = new bootstrap.tooltip(diaSemana)
