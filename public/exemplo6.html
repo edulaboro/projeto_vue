@@ -15,8 +15,8 @@
 </head>
 <body>
     <section id="app">
-        <!-- Quando fazemos um bind na class, temos que colocar a classe css do lado esquerdo e uma variável que será testada (Verdade ou falso) do lado direito -->
-        <section :class="[escolha ? 'claro' : 'escuro']">
+        <!-- quando fazemos um bind na class, temos que colocar a classe css do lado esquerdo e uma variável que será testada(verdadeiro ou falso) do lado direito -->
+        <section v-bind:class="[escolha ? 'claro' : 'escuro']">
             <input type="checkbox" id="tema" @change="mudarTema()">
             <label for="tema">Mudar Tema</label>
 

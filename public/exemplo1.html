@@ -2,30 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Começando com Vue</title>
 </head>
 <body>
-    <section id="app">
+   <section id="app">
         <p>Olá, meu nome é {{ nome }}</p>
-        <p>Meu sobre nome é {{ Sobrenome }}</p>
-        <p>Minha idade é: {{ idade }}</p>
-    </section>
-
-    <!-- Adicionando o VUE CDN no HTML-->
+        <p>Meu sobrenome é {{ sobrenome }}</p>
+        <p>Sua idade é {{ idade + idade }}</p>
+   </section>
     <script src="https://unpkg.com/vue@3"></script>
-    <!-- Esse script poderia estar no arquivo de JS separadamente -->
-    <script> 
+    <script>
         const app = Vue.createApp({
             data(){
                 return{
                     nome:"Rafael",
-                    Sobrenome:"Pinheiro",
-                    idade: 33
+                    sobrenome:"Pinheiro",
+                    idade: 18
                 }
             }
         })
-        // Informando a atuação do Vue no id="app" da section linha 9
+
         app.mount("#app")
     </script>
 </body>
